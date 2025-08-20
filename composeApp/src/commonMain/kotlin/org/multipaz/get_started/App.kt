@@ -56,7 +56,6 @@ import org.multipaz.models.presentment.MdocPresentmentMechanism
 import org.multipaz.models.presentment.PresentmentModel
 import org.multipaz.models.presentment.PresentmentSource
 import org.multipaz.models.presentment.SimplePresentmentSource
-import org.multipaz.prompt.PromptModel
 import org.multipaz.securearea.CreateKeySettings
 import org.multipaz.securearea.SecureArea
 import org.multipaz.securearea.SecureAreaRepository
@@ -64,6 +63,7 @@ import org.multipaz.storage.Storage
 import org.multipaz.trustmanagement.TrustManagerLocal
 import org.multipaz.trustmanagement.TrustMetadata
 import org.multipaz.util.Platform
+import org.multipaz.util.Platform.promptModel
 import org.multipaz.util.UUID
 import org.multipaz.util.toBase64Url
 import kotlin.time.Clock
@@ -87,7 +87,7 @@ lateinit var readerTrustManager: TrustManagerLocal
 @OptIn(ExperimentalTime::class)
 @Composable
 @Preview
-fun App(promptModel: PromptModel) {
+fun App() {
     MaterialTheme {
         // This ensures all prompts inherit the app's main style
         PromptDialogs(promptModel)
